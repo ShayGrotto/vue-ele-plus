@@ -16,8 +16,8 @@ import { fas } from '@fortawesome/free-solid-svg-icons'
 library.add(fas)
 
 //导入自定义组件
-import  Icon  from '@/components/Icon/index.vue'
-import Button from "@/components/Button/index.vue"
+import  Icon  from './components/Icon/index.vue'
+import Bu
 
 
 const app = createApp(App)
@@ -26,7 +26,6 @@ app.component('font-awesome-icon', FontAwesomeIcon)
 
 // 注册自定义组件
 app.component("Ele-Icon", Icon)
-app.component("Ele-Button", Button)
 
 app.use(router)
 

@@ -80,7 +80,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, type Ref } from "vue"
+import { ref, Ref } from "vue"
 
 const btnRef: Ref<HTMLElement | null> = ref(null)
 

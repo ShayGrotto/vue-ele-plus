@@ -29,7 +29,7 @@ interface IconProps {
 
     //自定义属性
     type?: string,
-    color?: string
+    color: string
 }
 
 defineOptions({

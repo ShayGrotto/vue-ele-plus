@@ -26,7 +26,7 @@ app.component('font-awesome-icon', FontAwesomeIcon)
 
 // 注册自定义组件
 app.component("Ele-Icon", Icon)
-app.component("Ele-Button", Button)
+
 
 app.use(router)
 

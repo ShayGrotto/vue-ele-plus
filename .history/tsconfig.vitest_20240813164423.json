@@ -1,7 +1,5 @@
 {   
-  "include": [
-    "./src/***/**/*.{ts,tsx,vue}",
-  ],
+  
   "extends": "./tsconfig.app.json",
   "exclude": [],
   "compilerOptions": {

@@ -80,14 +80,6 @@
 </template>
 
 <script setup lang="ts">
-import { ref, type Ref } from "vue"
-
-const btnRef: Ref<HTMLElement | null> = ref(null)
-
-function clickHandler() {
-    window.alert("按钮被点击了");
-    console.log(btnRef.value?.ref)
-}
 
 </script>
 

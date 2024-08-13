@@ -7,7 +7,7 @@
 <script setup lang="ts">
 import { computed } from "vue"
 import { omit } from "lodash-es"
-interface IconProps {
+export interface IconProps {
     // 图标
     icon: string,
     // 大小
@@ -28,8 +28,8 @@ interface IconProps {
     'spin-pluse'?: boolean,
 
     //自定义属性
-    type?: string,
-    color?: string
+    type: string,
+    color: string
 }
 
 defineOptions({
