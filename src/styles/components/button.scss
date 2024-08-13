@@ -1,0 +1,132 @@
+// 首先针对这个样式类里面，定义了一系列的样式变量
+.ele-button {
+    --ele-button-font-weight: var(--ele-font-weight-primary);
+    --ele-button-border-color: var(--ele-border-color);
+    --ele-button-bg-color: var(--ele-fill-color-blank);
+    --ele-button-text-color: var(--ele-text-color-regular);
+    --ele-button-disabled-text-color: var(--ele-disabled-text-color);
+    --ele-button-disabled-bg-color: var(--ele-fill-color-blank);
+    --ele-button-disabled-border-color: var(--ele-border-color-light);
+    --ele-button-hover-text-color: var(--ele-color-primary);
+    --ele-button-hover-bg-color: var(--ele-color-primary-light-9);
+    --ele-button-hover-border-color: var(--ele-color-primary-light-7);
+    --ele-button-active-text-color: var(--ele-button-hover-text-color);
+    --ele-button-active-border-color: var(--ele-color-primary);
+    --ele-button-active-bg-color: var(--ele-button-hover-bg-color);
+    --ele-button-outline-color: var(--ele-color-primary-light-5);
+    --ele-button-active-color: var(--ele-text-color-primary);
+  }
+  
+  .ele-button {
+    // 接下来再来书写基本的样式
+    display: inline-block;
+    line-height: 1;
+    white-space: nowrap;
+    cursor: pointer;
+    height: 40px;
+    background-color: var(--ele-button-bg-color);
+    border: var(--ele-border);
+    border-color: var(--ele-button-border-color);
+    color: var(--ele-button-text-color);
+    appearance: none;
+    text-align: center;
+    box-sizing: border-box;
+    outline: none;
+    margin: 0;
+    transition: 0.1s;
+    font-weight: var(--ele-button-font-weight);
+    user-select: none;
+    vertical-align: middle;
+    padding: 12px 20px;
+    font-size: var(--ele-font-size-base);
+    border-radius: var(--ele-border-radius-base);
+    &:hover,
+    &:focus {
+      color: var(--ele-button-hover-text-color);
+      border-color: var(--ele-button-hover-border-color);
+      background-color: var(--ele-button-hover-bg-color);
+      outline: none;
+    }
+    &:active {
+      color: var(--ele-button-active-text-color);
+      border-color: var(--ele-button-active-border-color);
+      background-color: var(--ele-button-active-bg-color);
+      outline: none;
+    }
+    &.is-round {
+      border-radius: var(--ele-border-radius-round);
+    }
+    &.is-circle {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      padding: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    // 禁用相关的样式
+    &.is-disabled,
+    &.is-disabled:hover,
+    &.is-disabled:focus,
+    &[disabled],
+    &[disabled]:hover,
+    &[disabled]:focus {
+      color: var(--ele-button-disabled-text-color);
+      cursor: not-allowed;
+      background-image: none;
+      background-color: var(--ele-button-disabled-bg-color);
+      border-color: var(--ele-button-disabled-border-color);
+    }
+    [class*='ele-icon'] + span {
+      margin-left: 6px;
+      position: relative;
+      bottom: 2px;
+    }
+  }
+  
+  @each $val in primary, success, warning, info, danger {
+    // 这是一种非常灵活的方式，通过挂上去一些类，改变 CSS 变量所对应的值
+    .ele-button--#{$val} {
+      --ele-button-text-color: var(--ele-color-white);
+      --ele-button-bg-color: var(--ele-color-#{$val});
+      --ele-button-border-color: var(--ele-color-#{$val});
+      --ele-button-outline-color: var(--ele-color-#{$val}-light-5);
+      --ele-button-active-color: var(--ele-color-#{$val}-dark-2);
+      --ele-button-hover-text-color: var(--ele-color-white);
+      --ele-button-hover-bg-color: var(--ele-color-#{$val}-light-3);
+      --ele-button-hover-border-color: var(--ele-color-#{$val}-light-3);
+      --ele-button-active-bg-color: var(--ele-color-#{$val}-dark-2);
+      --ele-button-active-border-color: var(--ele-color-#{$val}-dark-2);
+      --ele-button-disabled-text-color: var(--ele-color-white);
+      --ele-button-disabled-bg-color: var(--ele-color-#{$val}-light-5);
+      --ele-button-disabled-border-color: var(--ele-color-#{$val}-light-5);
+    }
+    // 如果挂了 is-plain 这个，那么同样是改变一些 CSS 变量的值
+    .ele-button--#{$val}.is-plain {
+      --ele-button-text-color: var(--ele-color-#{$val});
+      --ele-button-bg-color: var(--ele-color-#{$val}-light-9);
+      --ele-button-border-color: var(--ele-color-#{$val}-light-5);
+      --ele-button-hover-text-color: var(--ele-color-white);
+      --ele-button-hover-bg-color: var(--ele-color-#{$val});
+      --ele-button-hover-border-color: var(--ele-color-#{$val});
+      --ele-button-active-text-color: var(--ele-color-white);
+    }
+  }
+  
+  // 针对 ele-button-large 以及 ele-button-small 书写相应的样式即可
+  .ele-button--large {
+    --ele-button-size: 50px;
+    height: var(--ele-button-size);
+    padding: 12px 19px;
+    font-size: var(--ele-font-size-base);
+    border-radius: var(--ele-border-radius-base);
+  }
+  .ele-button--small {
+    --ele-button-size: 24px;
+    height: var(--ele-button-size);
+    padding: 5px 11px;
+    font-size: 12px;
+    border-radius: calc(var(--ele-border-radius-base) - 1px);
+  }
+  
