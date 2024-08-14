@@ -1,0 +1,58 @@
+.ele-collapse {
+    --ele-collapse-border-color: var(--ele-border-color-light);
+    --ele-collapse-header-height: 48px;
+    --ele-collapse-header-bg-color: var(--ele-fill-color-blank);
+    --ele-collapse-header-text-color: var(--ele-text-color-primary);
+    --ele-collapse-header-font-size: 13px;
+    --ele-collapse-content-bg-color: var(--ele-fill-color-blank);
+    --ele-collapse-content-font-size: 13px;
+    --ele-collapse-content-text-color: var(--ele-text-color-primary);
+    --ele-collapse-disabled-text-color: var(--ele-disabled-text-color);
+    --ele-collapse-disabled-border-color: var(--ele-border-color-lighter);
+    border-top: 1px solid var(--ele-collapse-border-color);
+    width: 100%;
+  }
+  .ele-collapse-item__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: var(--ele-collapse-header-height);
+    line-height: var(--ele-collapse-header-height);
+    background-color: var(--ele-collapse-header-bg-color);
+    color: var(--ele-collapse-header-text-color);
+    cursor: pointer;
+    font-size: var(--ele-collapse-header-font-size);
+    font-weight: 500;
+    transition: border-bottom-color var(--ele-transition-duration);
+    outline: none;
+    border-bottom: 1px solid var(--ele-collapse-border-color);
+    &.is-disabled {
+      color: var(--ele-collapse-disabled-text-color);
+      cursor: not-allowed;
+      background-image: none;
+    }
+    &.is-active {
+      border-bottom-color: transparent;
+      .header-angle {
+        transform: rotate(90deg);
+      }
+    }
+    .header-angle {
+      transition: transform var(--ele-transition-duration);
+    }
+  }
+  .ele-collapse-item__content {
+    will-change: height;
+    background-color: var(--ele-collapse-content-bg-color);
+    overflow: hidden;
+    box-sizing: border-box;
+    font-size: var(--ele-collapse-content-font-size);
+    color: var(--ele-collapse-content-text-color);
+    border-bottom: 1px solid var(--ele-collapse-border-color);
+    padding-bottom: 25px;
+  }
+  .slide-enter-active,
+  .slide-leave-active {
+    transition: height var(--ele-transition-duration);
+  }
+  
