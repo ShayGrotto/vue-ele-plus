@@ -32,7 +32,7 @@ app.component("Ele-Icon", Icon)
 app.component("Ele-Button", Button)
 app.component("Ele-Collapse", Collapse)
 app.component("Ele-CollapseItem", CollapseItem)
-app.component("Ele-Dialog", Dialog)
+app._component("Ele-Dialog", Dialog")
 
 
 app.use(router)

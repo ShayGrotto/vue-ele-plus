@@ -18,9 +18,9 @@ library.add(fas)
 //导入自定义组件
 import  Icon  from '@/components/Icon/index.vue'
 import Button from "@/components/Button/index.vue"
-import Collapse from '@/components/Collapse/Collapse.vue'
-import CollapseItem from '@/components/Collapse/CollapseItem.vue'
-import Dialog from '@/components/Dialog/index.vue'
+import Collapse from './components/Collapse/Collapse.vue'
+import CollapseItem from './components/Collapse/CollapseItem.vue'
+import Dialog from './components/Dialog/index.vue'
 
 
 const app = createApp(App)
@@ -32,8 +32,6 @@ app.component("Ele-Icon", Icon)
 app.component("Ele-Button", Button)
 app.component("Ele-Collapse", Collapse)
 app.component("Ele-CollapseItem", CollapseItem)
-app.component("Ele-Dialog", Dialog)
-
 
 app.use(router)
 
