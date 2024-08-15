@@ -1,0 +1,57 @@
+.ele-pager {
+    --ele-pager-theme-color: var(--ele-color-primary);
+    --ele-pager-size: 34px;
+    --ele-pager-padding: 0 12px;
+    --ele-pager-font-size: var(--ele-font-size-base);
+  }
+  .ele-pager {
+    text-align: center;
+    a {
+      border: 1px solid #e1e2e3;
+      background-color: #f0f2f5;
+      color: #303133;
+      height: var(--ele-pager-size);
+      display: inline-block;
+      line-height: var(--ele-pager-size);
+      border-radius: 2px;
+      padding: var(--ele-pager-padding);
+      margin: 8px;
+      font-size: var(--ele-pager-font-size);
+      cursor: pointer;
+      user-select: none;
+      &:hover {
+        color: var(--ele-pager-theme-color);
+      }
+      /* 当前页会挂上 active 类 */
+      &.active {
+        //   border: none;
+        color: #fff;
+        background-color: var(--ele-pager-theme-color);
+        border-color: var(--ele-pager-theme-color);
+      }
+      /* a 标签禁用的时候会挂上 disabled 类 */
+      &.disabled {
+        color: #ccc;
+        cursor: not-allowed;
+      }
+    }
+  }
+  
+  @each $val in primary, success, warning, info, danger {
+    .ele-pager--#{$val} {
+      --ele-pager-theme-color: var(--ele-color-#{$val});
+    }
+  }
+  
+  .ele-pager--small {
+    --ele-pager-size: 25px;
+    --ele-pager-padding: 0 8px;
+    --ele-pager-font-size: var(--ele-font-size-small);
+  }
+  
+  .ele-pager--large {
+    --ele-pager-size: 44px;
+    --ele-pager-padding: 0 16px;
+    --ele-pager-font-size: var(--ele-font-size-large);
+  }
+  

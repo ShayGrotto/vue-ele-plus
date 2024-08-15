@@ -21,7 +21,7 @@ import Button from "@/components/Button/index.vue"
 import Collapse from '@/components/Collapse/Collapse.vue'
 import CollapseItem from '@/components/Collapse/CollapseItem.vue'
 import Dialog from '@/components/Dialog/index.vue'
-import Pager from "@/components/Pager/index.vue"
+import Pager from "@"
 
 
 const app = createApp(App)
@@ -34,7 +34,6 @@ app.component("Ele-Button", Button)
 app.component("Ele-Collapse", Collapse)
 app.component("Ele-CollapseItem", CollapseItem)
 app.component("Ele-Dialog", Dialog)
-app.component("Ele-Pager", Pager)
 
 
 app.use(router)

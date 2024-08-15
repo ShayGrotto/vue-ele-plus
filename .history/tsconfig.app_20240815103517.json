@@ -1,6 +1,6 @@
 {
   "extends": "@vue/tsconfig/tsconfig.dom.json",
-  "include": ["env.d.ts", "./src/**/*", "src/**/*.vue", "src/components/Collapse/CollapseItem.vue", "src/components/**/*", "src/components/Pager/*" ],
+  "include": ["env.d.ts", "./src/**/*", "src/**/*.vue", "src/components/Collapse/CollapseItem.vue", "src/components/**/*", ],
   "exclude": ["src/**/__tests__/*"],
   "compilerOptions": {
     "composite": true,

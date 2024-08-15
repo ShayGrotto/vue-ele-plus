@@ -19,18 +19,18 @@
         <Ele-Pager :currentPage="currentPage4" :total="20" :pageCount="10" type="danger" @current-change="(page: number) => (currentPage4 = page)"/>
     </div>
     <div class="row">
-        <Ele-Pager :currentPage="currentPage5" :total="20" :pageCount="10" type="warning" @current-change="(page: number) => (currentPage5 = page)"/>
+        <Ele-Pager :currentPage="currentPage5" :total="20" :pageCount="10" type="warning" @current-change="(page: SVGAnimatedNumberList) => (currentPage5 = page)"/>
     </div>
 
     <h1 class="row-title">调整大小</h1>
     <div class="row">
-        <Ele-Pager :currentPage="currentPage6" :total="20" :pageCount="10" size="small" @current-change="(page: number) => (currentPage6 = page)"/>
+        <Ele-Pager :currentPage="currentPage6" :total="20" :pageCount="10" size="small" @current-change="(page) => (currentPage6 = page)"/>
     </div>
     <div class="row">
-        <Ele-Pager :currentPage="currentPage7" :total="20" :pageCount="10"  @current-change="(page: number) => (currentPage7 = page)"/>
+        <Ele-Pager :currentPage="currentPage7" :total="20" :pageCount="10"  @current-change="(page) => (currentPage7 = page)"/>
     </div>
     <div class="row">
-        <Ele-Pager :currentPage="currentPage8" :total="20" :pageCount="10" size="large" @current-change="(page: number) => (currentPage8 = page)"/>
+        <Ele-Pager :currentPage="currentPage8" :total="20" :pageCount="10" size="large" @current-change="(page) => (currentPage8 = page)"/>
     </div>
 </template>
 

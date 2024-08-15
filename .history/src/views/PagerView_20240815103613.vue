@@ -24,13 +24,13 @@
 
     <h1 class="row-title">调整大小</h1>
     <div class="row">
-        <Ele-Pager :currentPage="currentPage6" :total="20" :pageCount="10" size="small" @current-change="(page: number) => (currentPage6 = page)"/>
+        <Ele-Pager :currentPage="currentPage6" :total="20" :pageCount="10" size="small" @current-change="(page) => (currentPage6 = page)"/>
     </div>
     <div class="row">
-        <Ele-Pager :currentPage="currentPage7" :total="20" :pageCount="10"  @current-change="(page: number) => (currentPage7 = page)"/>
+        <Ele-Pager :currentPage="currentPage7" :total="20" :pageCount="10"  @current-change="(page) => (currentPage7 = page)"/>
     </div>
     <div class="row">
-        <Ele-Pager :currentPage="currentPage8" :total="20" :pageCount="10" size="large" @current-change="(page: number) => (currentPage8 = page)"/>
+        <Ele-Pager :currentPage="currentPage8" :total="20" :pageCount="10" size="large" @current-change="(page) => (currentPage8 = page)"/>
     </div>
 </template>
 

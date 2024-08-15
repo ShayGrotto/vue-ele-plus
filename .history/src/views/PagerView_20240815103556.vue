@@ -6,31 +6,31 @@
 
     <h1 class="row-title">总页数 total 小于 pageCount, 此时全部显示</h1>
     <div class="row">
-        <Ele-Pager :currentPage="currentPage2" :total="3" :pageCount="10" @current-change="(page: number) => (currentPage2 = page)"/>
+        <Ele-Pager :currentPage="currentPage2" :total="3" :pageCount="10" @current-change="(page) => (currentPage2 = page)"/>
     </div>
 
     <h1 class="row-title">最大页码显示数 pageCount 可以调整</h1>
     <div class="row">
-        <Ele-Pager :currentPage="currentPage3" :total="12" :pageCount="15" @current-change="(page: number) => (currentPage3 = page)" />
+        <Ele-Pager :currentPage="currentPage3" :total="12" :pageCount="15" @current-change="(page) => (currentPage3 = page)" />
     </div>
 
     <h1 class="row-title">调整主题颜色</h1>
     <div class="row">
-        <Ele-Pager :currentPage="currentPage4" :total="20" :pageCount="10" type="danger" @current-change="(page: number) => (currentPage4 = page)"/>
+        <Ele-Pager :currentPage="currentPage4" :total="20" :pageCount="10" type="danger" @current-change="(page) => (currentPage4 = page)"/>
     </div>
     <div class="row">
-        <Ele-Pager :currentPage="currentPage5" :total="20" :pageCount="10" type="warning" @current-change="(page: number) => (currentPage5 = page)"/>
+        <Ele-Pager :currentPage="currentPage5" :total="20" :pageCount="10" type="warning" @current-change="(page) => (currentPage5 = page)"/>
     </div>
 
     <h1 class="row-title">调整大小</h1>
     <div class="row">
-        <Ele-Pager :currentPage="currentPage6" :total="20" :pageCount="10" size="small" @current-change="(page: number) => (currentPage6 = page)"/>
+        <Ele-Pager :currentPage="currentPage6" :total="20" :pageCount="10" size="small" @current-change="(page) => (currentPage6 = page)"/>
     </div>
     <div class="row">
-        <Ele-Pager :currentPage="currentPage7" :total="20" :pageCount="10"  @current-change="(page: number) => (currentPage7 = page)"/>
+        <Ele-Pager :currentPage="currentPage7" :total="20" :pageCount="10"  @current-change="(page) => (currentPage7 = page)"/>
     </div>
     <div class="row">
-        <Ele-Pager :currentPage="currentPage8" :total="20" :pageCount="10" size="large" @current-change="(page: number) => (currentPage8 = page)"/>
+        <Ele-Pager :currentPage="currentPage8" :total="20" :pageCount="10" size="large" @current-change="(page) => (currentPage8 = page)"/>
     </div>
 </template>
 

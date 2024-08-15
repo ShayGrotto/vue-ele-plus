@@ -19,7 +19,7 @@
         <Ele-Pager :currentPage="currentPage4" :total="20" :pageCount="10" type="danger" @current-change="(page: number) => (currentPage4 = page)"/>
     </div>
     <div class="row">
-        <Ele-Pager :currentPage="currentPage5" :total="20" :pageCount="10" type="warning" @current-change="(page: number) => (currentPage5 = page)"/>
+        <Ele-Pager :currentPage="currentPage5" :total="20" :pageCount="10" type="warning" @current-change="(page: ) => (currentPage5 = page)"/>
     </div>
 
     <h1 class="row-title">调整大小</h1>
