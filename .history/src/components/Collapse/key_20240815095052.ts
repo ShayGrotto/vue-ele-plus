@@ -1,6 +1,6 @@
 import type { InjectionKey, Ref } from 'vue'
 
-export interface CollapseContext {
+interface CollapseContext {
     activeNames: Ref<string[]>
     handleItemClick: (name: string) => void
 

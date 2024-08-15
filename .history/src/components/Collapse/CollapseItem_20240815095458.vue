@@ -36,7 +36,7 @@
 
 <script setup lang="ts">
 import { computed, inject} from "vue"
-
+import type {InjectionKey} from 'vue'
 import type { CollapseContext } from "./key";
  
 import { collapseContextKey } from "./key"

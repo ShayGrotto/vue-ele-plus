@@ -36,7 +36,7 @@
 
 <script setup lang="ts">
 import { computed, inject} from "vue"
-
+import type {} from 'vue'
 import type { CollapseContext } from "./key";
  
 import { collapseContextKey } from "./key"
@@ -52,7 +52,7 @@ defineOptions({
 
 const props = defineProps<CollapseItemProps>()
 
-const collapseContext  = inject<CollapseContext>(collapseContextKey, {} as CollapseContext)
+const collapseContext  = inject<CollapseContext>(collapseContextKey)
 
 const isActive = computed(() => {
     return collapseContext && collapseContext?.activeNames.value.includes(props.name)
