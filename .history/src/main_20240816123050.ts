@@ -37,7 +37,6 @@ app.component("Ele-CollapseItem", CollapseItem)
 app.component("Ele-Dialog", Dialog)
 app.component("Ele-Pager", Pager)
 app.component("Ele-Tooltip", Tooltip)
-app.component("Ele-Dropdown", Dropdown)
 
 app.use(router)
 
