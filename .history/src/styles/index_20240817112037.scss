@@ -1,0 +1,11 @@
+// 样式的入口文件，回头会引入其他的所有样式
+@import "./var.scss";
+@import "./reset.scss";
+
+@import "./components/icon.scss";
+@import "./components/button.scss";
+@import "./components//collapse.scss";
+@import "./components/dialog.scss";
+@import "./components/pager.scss";
+@import "./components/tooltip.scss";
+@import "./components/dropdown.scss";

@@ -24,6 +24,7 @@ import Dialog from '@/components/Dialog/index.vue'
 import Pager from "@/components/Pager/index.vue"
 import Tooltip from '@/components/Tooltip/index.vue'
 import Dropdown from '@/components/Dropdown/index.vue'
+import Card from "@/components/Card/index.vue"
 
 const app = createApp(App)
 
@@ -38,6 +39,7 @@ app.component("Ele-Dialog", Dialog)
 app.component("Ele-Pager", Pager)
 app.component("Ele-Tooltip", Tooltip)
 app.component("Ele-Dropdown", Dropdown)
+app.component("Ele-Card", Card)
 
 app.use(router)
 
